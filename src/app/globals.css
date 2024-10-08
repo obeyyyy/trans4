@@ -1,33 +1,116 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Body reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Main container styling */
+.main-page {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 50px;
+  z-index: 10; /* Stay above other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  color: white;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-left: 20px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #f00;
+}
+
+/* Background section styling (fixed position) */
+.background-section {
+  background-image: url('/Designer1.jpeg'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  height: 100vh; /* Full viewport height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Behind all other content */
+}
+
+/* Text overlay (on top of the background) */
+.text-overlay {
+  position: fixed; /* Keep it in place while scrolling */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 5; /* Above the background and other sections */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 10px;
+  opacity: 0.9;
+  width: 80%;
+  max-width: 800px;
+}
+
+/* Scrollable section styling */
+.scroll-section {
+  padding: 50px;
+  margin-top: 80px; /* To make space for navbar */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  position: relative;
+  z-index: 1; /* On top of the background */
+  transition: all 0.5s ease-in-out;
+}
+
+.scroll-section h2 {
+  margin-bottom: 20px;
+}
+
+/* When the second section comes into view */
+.scroll-section.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Styling for better spacing */
+#section1 {
+  height: 100vh; /* Full section height */
+}
+
+#section2 {
+  height: 100vh; /* Full section height */
+  padding: 50px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
