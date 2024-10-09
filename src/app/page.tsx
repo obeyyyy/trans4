@@ -1,55 +1,62 @@
 "use client"
-
-import { useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
-  const [isVisible, setIsVisible] = useState(false);
+  const section2Ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      // Example scroll visibility logic for the second section
-      if (scrollPosition > 100) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (section2Ref.current) {
+      observer.observe(section2Ref.current);
+    }
+
+    return () => {
+      if (section2Ref.current) {
+        observer.unobserve(section2Ref.current);
       }
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <main className="main-page">
       {/* Navbar */}
       <nav className="navbar">
-        <h1>My Site</h1>
+        <h1>TRANS4 SL</h1>
         <ul>
-          <li><a href="#section1">Section 1</a></li>
-          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#">Email: info@gmail.com</a></li>
+          <li><a href="#">Tel: +212 558 954 12</a></li>
         </ul>
       </nav>
 
       {/* Background section */}
-      <div className="background-section">
-        {/* You can add a background image here */}
-      </div>
-
-      {/* Text div that stays on top of the background */}
-      <div className="text-overlay">
-        <h2>This is the overlay text</h2>
-        <p>It stays on top of the background as you scroll</p>
+      <div className="background-section bg-fixed">
+        {/* Text overlay that should appear immediately */}
+        <div className="text-overlay">
+          <h2>TRANS4 SL</h2>
+          <p>Efficient Transportation Services</p>
+        </div>
       </div>
 
       {/* Scrollable section 1 */}
-      <div className="scroll-section" id="section1">
+      <div className="scroll-section" id="section1"  ref={section2Ref}>
         <h2>This is the first scrollable section</h2>
         <p>More content here...</p>
       </div>
 
-      {/* Scrollable section 2 */}
-      <div className={`scroll-section ${isVisible ? 'show' : ''}`} id="section2">
+      {/* Scrollable section 2 with animation */}
+      <div className="scroll-section" id="section2" ref={section2Ref}>
         <h2>This section slides over the background</h2>
         <p>Content of the second section...</p>
       </div>
