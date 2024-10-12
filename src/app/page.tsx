@@ -1,5 +1,7 @@
 "use client"
 import { useEffect, useRef } from 'react';
+import TransText from "./Trans4Text";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const section2Ref = useRef<HTMLDivElement | null>(null);
@@ -41,24 +43,67 @@ export default function Home() {
       </nav>
 
       {/* Background section */}
-      <div className="background-section bg-fixed">
+     <div className='backgr'>
+      
         {/* Text overlay that should appear immediately */}
         <div className="text-overlay">
-          <h2>TRANS4 SL</h2>
-          <p>Efficient Transportation Services</p>
+          <TransText/>
+          
+          </div>
+          <div className="words-container">
+          <div className="words" data-text="Transit -> Transport -> Consignation -> Consultation">
+            Transit&nbsp;{'->'}&nbsp;Transport&nbsp;{'->'}&nbsp;Consignation&nbsp;{'->'}&nbsp;Consultation
+          </div>
         </div>
-      </div>
+      
 
-      {/* Scrollable section 1 */}
-      <div className="scroll-section" id="section1"  ref={section2Ref}>
-        <h2>This is the first scrollable section</h2>
-        <p>More content here...</p>
-      </div>
+     {/* Our Services Section */}
+     <section className="services-section">
+          <h2 className="section-title">Our Services</h2>
 
-      {/* Scrollable section 2 with animation */}
-      <div className="scroll-section" id="section2" ref={section2Ref}>
-        <h2>This section slides over the background</h2>
-        <p>Content of the second section...</p>
+          {/* Animated service div */}
+          <motion.div
+            className="service"
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img src="/service1.jpg" alt="Consignation" className="service-image" />
+            <div className="service-text">
+              <h3>Consignation</h3>
+              <p>Details about service 1.</p>
+            </div>
+          </motion.div>
+
+          {/* Another animated service div */}
+          <motion.div
+            className="service"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img src="/service2.jpg" alt="Transport" className="service-image" />
+            <div className="service-text">
+              <h3>Transport</h3>
+              <p>Details about service 2.</p>
+            </div>
+          </motion.div>
+
+           {/* Another animated service div */}
+           <motion.div
+            className="service"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <img src="/service3.jpg" alt="Transit" className="service-image" />
+            <div className="service-text">
+              <h3>Transit</h3>
+              <p>Details about service 2.</p>
+            </div>
+          </motion.div>
+
+        </section>
       </div>
     </main>
   );
