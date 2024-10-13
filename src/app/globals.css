@@ -182,7 +182,7 @@ small {
   background: #e8e8e8;
   --gap: 5em;
   --line: 1px;
-  --color: rgb(0, 0, 0);
+  --color: rgb(255, 245, 245);
 
   /* Background pattern */
   background-image: linear-gradient(
@@ -217,25 +217,34 @@ small {
 
 /* Main container */
 .services-section {
-
+  display: flex; /* Make sure the section is flexbox */
+  flex-direction: row; /* Set to row to align items horizontally */
+ 
+  justify-content: space-around; /* Space out items */
+  align-items: flex-start; /* Align items at the top */
+  gap: 0px; /* Add some spacing between the items */
   padding: 50px;
   text-align: center;
-  margin-top: 10%;
- 
+  
 }
 
 .section-title {
+  
+  text-align: center;
   font-size: 2.5em;
-  margin-bottom: 30px;
+  padding-top: 17%;
 }
 
-.service {
+
  
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  margin-bottom: 50px;
+.service {
+    display: flex; /* Enable flexbox within each service */
+    flex-direction: row; /* Ensure image and text are aligned horizontally */
+    align-items: center; /* Align items vertically in the center */
+    width: 45%; /* Adjust width so that two items can fit in one row */
+   
 }
+  
 
 .service-image {
   border-radius: 15%;
@@ -248,6 +257,8 @@ small {
 
 .service-text {
   text-align: left;
+  padding: 50px;
+  text-align: center;
 }
 
 .service-text h3 {
@@ -259,3 +270,88 @@ small {
   font-size: 1.1em;
 }
 
+/* new bg*/
+.card {
+  padding: 7px;
+  width: 330px;
+  min-height: 370px;
+  border-radius: 20px;
+  background: #212121;
+  
+  transition: 0.4s;
+}
+
+.card:hover {
+  translate: 0 -10px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e62e21c9;
+  margin: 15px 0 0 10px;
+}
+
+.card-image1 {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 10px;
+  background-image: url('../../public/service1.jpg');
+  background-size: cover; /* Makes sure the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.card-image2 {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 10px;
+  background-image: url('../../public/service2.jpg');
+  background-size: cover; /* Makes sure the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.card-image3 {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 10px;
+  background-image: url('../../public/service3.jpg');
+  background-size: cover; /* Makes sure the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+
+.card-image4 {
+  min-height: 170px;
+  background-color: #313131;
+  border-radius: 10px;
+  background-image: url('../../public/service4.jpg');
+  background-size: cover; /* Makes sure the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents repeating */
+  box-shadow: inset 5px 5px 3px #2f2f2f,
+            inset -5px -5px 3px #333333;
+}
+.card-body {
+  margin: 13px 0 0 10px;
+  color: rgb(184, 184, 184);
+  font-size: 15px;
+}
+
+.footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: #b3b3b3;
+}
+
+.by-name {
+  font-weight: 700;
+}

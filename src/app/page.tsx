@@ -58,8 +58,9 @@ export default function Home() {
       
 
      {/* Our Services Section */}
+     <h2 className="section-title">Our Services</h2>
      <section className="services-section">
-          <h2 className="section-title">Our Services</h2>
+          
 
           {/* Animated service div */}
           <motion.div
@@ -68,11 +69,14 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <img src="/service1.jpg" alt="Consignation" className="service-image" />
-            <div className="service-text">
-              <h3>Consignation</h3>
-              <p>Details about service 1.</p>
-            </div>
+             <div className="card">
+            <div className="card-image1"></div>
+            <p className="card-title">CONSULTING</p>
+            <p className="card-body">
+             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            </p>
+           
+          </div>
           </motion.div>
 
           {/* Another animated service div */}
@@ -80,13 +84,16 @@ export default function Home() {
             className="service"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7 }}
           >
-            <img src="/service2.jpg" alt="Transport" className="service-image" />
-            <div className="service-text">
-              <h3>Transport</h3>
-              <p>Details about service 2.</p>
-            </div>
+            <div className="card">
+            <div className="card-image2"></div>
+            <p className="card-title">TRANSPORTATION</p>
+            <p className="card-body">
+             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            </p>
+           
+          </div>
           </motion.div>
 
            {/* Another animated service div */}
@@ -94,13 +101,34 @@ export default function Home() {
             className="service"
             initial={{ opacity: 0, x: 100 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8 }}
           >
-            <img src="/service3.jpg" alt="Transit" className="service-image" />
-            <div className="service-text">
-              <h3>Transit</h3>
-              <p>Details about service 2.</p>
-            </div>
+            <div className="card">
+            <div className="card-image3"></div>
+            <p className="card-title">TRANSIT</p>
+            <p className="card-body">
+             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            </p>
+           
+          </div>
+          </motion.div>
+
+          
+           {/* Another animated service div */}
+           <motion.div
+            className="service"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+            <div className="card">
+            <div className="card-image4"></div>
+            <p className="card-title">CONSIGNATION</p>
+            <p className="card-body">
+             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            </p>
+           
+          </div>
           </motion.div>
 
         </section>
