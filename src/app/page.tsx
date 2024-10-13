@@ -7,40 +7,38 @@ import { translations } from './translation';
 
 export default function Home() {
   const [language, setLanguage] = useState<'en' | 'fr'>('en'); // Default language is English
+  const [showVideo, setShowVideo] = useState(true); // State to control video visibility
+  const sectionRef = useRef<HTMLDivElement | null>(null); // Ref for our services section
 
   const changeLanguage = (lang: 'en' | 'fr') => {
     setLanguage(lang);
   };
-
-
-  const section2Ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+            setShowVideo(false); // Hide video when "Our Services" section is in view
           } else {
-            entry.target.classList.remove('show');
+            setShowVideo(true); // Show video when the section is out of view
           }
         });
       },
       { threshold: 0.3 }
     );
 
-    if (section2Ref.current) {
-      observer.observe(section2Ref.current);
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
     }
 
     return () => {
-      if (section2Ref.current) {
-        observer.unobserve(section2Ref.current);
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
       }
     };
   }, []);
 
-  
 
   return (
     <main className="main-page">
@@ -68,8 +66,16 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Background section */}
-     <div className='backgr'>
+      {/* Video Background */}
+      {showVideo && (
+        <video autoPlay muted loop className="video-background">
+          <source src="/tangermed.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      )}
+
+
+     
       
         {/* Text overlay that should appear immediately */}
         <div className="text-overlay">
@@ -82,7 +88,8 @@ export default function Home() {
           </div>
         </div>
       
-
+ {/* Background section */}
+ <div className='backgr'>
      {/* Our Services Section */}
      <h2 className="section-title">{translations[language].main.our_services}</h2>
      <section className="services-section">
