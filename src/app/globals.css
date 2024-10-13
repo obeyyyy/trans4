@@ -279,7 +279,7 @@ small {
 }
 
 .card:hover {
-  translate: 0 -10px;
+  translate: 0 -20px;
 }
 
 .card-title {
@@ -297,9 +297,10 @@ small {
   background-size: cover; /* Makes sure the image covers the entire area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
+  
+  
 }
+
 
 .card-image2 {
   min-height: 170px;
@@ -309,8 +310,7 @@ small {
   background-size: cover; /* Makes sure the image covers the entire area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
+
 }
 
 .card-image3 {
@@ -321,8 +321,7 @@ small {
   background-size: cover; /* Makes sure the image covers the entire area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
+
 }
 
 .card-image4 {
@@ -333,8 +332,7 @@ small {
   background-size: cover; /* Makes sure the image covers the entire area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents repeating */
-  box-shadow: inset 5px 5px 3px #2f2f2f,
-            inset -5px -5px 3px #333333;
+ 
 }
 .card-body {
   margin: 13px 0 0 10px;
