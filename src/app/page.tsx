@@ -103,7 +103,7 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
              <div className="card">
-            <div className="card-image1"></div>
+            <div className="card-image card-image1"></div>
             <p className="card-title">CONSULTING</p>
             <p className="card-body">
             {translations[language].main.consultation}
@@ -112,22 +112,21 @@ export default function Home() {
           </div>
           </motion.div>
 
-          {/* Another animated service div */}
           <motion.div
-            className="service"
-            initial={{ opacity: 0, x: 100 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
+          className="service"
+          initial={{ opacity: 0, x: 100 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
           >
-            <div className="card">
-            <div className="card-image2"></div>
+          <div className="card">
+            <div className="card-image card-image2"></div> {/* Correct class names */}
             <p className="card-title">TRANSPORTATION</p>
             <p className="card-body">
-            {translations[language].main.transit}
+              {translations[language].main.transit}
             </p>
-           
           </div>
-          </motion.div>
+        </motion.div>
+
 
            {/* Another animated service div */}
            <motion.div
@@ -137,7 +136,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <div className="card">
-            <div className="card-image3"></div>
+            <div className=" card-image card-image3"></div>
             <p className="card-title">TRANSIT</p>
             <p className="card-body">
             {translations[language].main.transit}
@@ -155,7 +154,7 @@ export default function Home() {
             transition={{ duration: 0.9 }}
           >
             <div className="card">
-            <div className="card-image4"></div>
+            <div className="card-image  card-image4"></div>
             <p className="card-title">CONSIGNATION</p>
             <p className="card-body">
             {translations[language].main.consignation}
