@@ -355,3 +355,32 @@ small {
 .by-name {
   font-weight: 700;
 }
+
+.navbar select {
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between flags */
+  margin-left: 20px;
+}
+
+.language-icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 0.6; /* Dim the non-selected flag */
+  transition: opacity 0.3s ease;
+}
+
+.language-icon.active {
+  opacity: 1; /* Highlight the selected flag */
+}
+
+.language-icon:hover {
+  opacity: 1;
+}

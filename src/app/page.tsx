@@ -1,9 +1,18 @@
 "use client"
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import TransText from "./Trans4Text";
 import { motion } from "framer-motion";
+import { translations } from './translation';
+
 
 export default function Home() {
+  const [language, setLanguage] = useState<'en' | 'fr'>('en'); // Default language is English
+
+  const changeLanguage = (lang: 'en' | 'fr') => {
+    setLanguage(lang);
+  };
+
+
   const section2Ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -31,6 +40,8 @@ export default function Home() {
     };
   }, []);
 
+  
+
   return (
     <main className="main-page">
       {/* Navbar */}
@@ -40,6 +51,21 @@ export default function Home() {
           <li><a href="#">Email: info@gmail.com</a></li>
           <li><a href="#">Tel: +212 558 954 12</a></li>
         </ul>
+         {/* Language Icons */}
+         <div className="language-switcher">
+          <img
+            src="/englishflag.svg" // Use an English flag SVG
+            alt="English"
+            className={`language-icon ${language === 'en' ? 'active' : ''}`}
+            onClick={() => changeLanguage('en')}
+          />
+          <img
+            src="/frenchflah.svg" // Use a French flag SVG
+            alt="Français"
+            className={`language-icon ${language === 'fr' ? 'active' : ''}`}
+            onClick={() => changeLanguage('fr')}
+          />
+        </div>
       </nav>
 
       {/* Background section */}
@@ -58,7 +84,7 @@ export default function Home() {
       
 
      {/* Our Services Section */}
-     <h2 className="section-title">Our Services</h2>
+     <h2 className="section-title">{translations[language].main.our_services}</h2>
      <section className="services-section">
           
 
@@ -73,7 +99,7 @@ export default function Home() {
             <div className="card-image1"></div>
             <p className="card-title">CONSULTING</p>
             <p className="card-body">
-             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            {translations[language].main.consultation}
             </p>
            
           </div>
@@ -90,7 +116,7 @@ export default function Home() {
             <div className="card-image2"></div>
             <p className="card-title">TRANSPORTATION</p>
             <p className="card-body">
-             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            {translations[language].main.transit}
             </p>
            
           </div>
@@ -107,7 +133,7 @@ export default function Home() {
             <div className="card-image3"></div>
             <p className="card-title">TRANSIT</p>
             <p className="card-body">
-             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            {translations[language].main.transit}
             </p>
            
           </div>
@@ -125,7 +151,7 @@ export default function Home() {
             <div className="card-image4"></div>
             <p className="card-title">CONSIGNATION</p>
             <p className="card-body">
-             Our transit services include from border entrance export and import ve vesdvr revre rfvesvcr zfcszecez rvceer ect...   dvervzxzx
+            {translations[language].main.consignation}
             </p>
            
           </div>
