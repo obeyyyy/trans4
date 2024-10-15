@@ -128,6 +128,10 @@ small {
   padding-left: 30em; /* Space between original and duplicated text */
 }
 
+.backgr{
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
+  margin-top: 50px;
+}
 
 /* Main backgr */
 /* Main container */
@@ -158,7 +162,7 @@ small {
 .services-section {
   display: grid;
   border:white;
-  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
+ 
   /* General grid layout for larger screens */
   
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
@@ -179,12 +183,30 @@ small {
   width:100%;
 }
 
+.service1{
+  width:200%;
+}
+
 .card {
   margin-left:50px;
   transition: 0.4s;
   padding: 7px;
   min-height: 370px;
   width:270px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.services-section1{
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
+}
+
+.card1 {
+  margin-left:50px;
+  transition: 0.4s;
+  padding: 7px;
+  min-height: 500px;
+  width:1400px;
   border-radius: 20px;
   background: #ffffff;
 }
@@ -201,7 +223,7 @@ small {
 }
 
 .card-image {
-  min-height: 170px;
+  min-height: 200px;
   border-radius: 10px;
   background-size: cover; /* Makes sure the image covers the entire area */
   background-position: center; /* Centers the image */
@@ -210,8 +232,8 @@ small {
 
 /* Specific background images for each card */
 .card-image1 {
- 
-  background-image: url('/service1.jpg');
+  background-image: url('/service3.jpg');
+  height: 300px;
 }
 
 .card-image2 {
@@ -219,7 +241,7 @@ small {
 }
 
 .card-image3 {
-  background-image: url('/service3.jpg');
+  background-image: url('/service1.jpg');
 }
 
 .card-image4 {
@@ -307,12 +329,12 @@ small {
   }
 
   
-.services-section {
-  grid-template-columns: 1fr;
-}
+  .services-section {
+    grid-template-columns: 1fr;
+  }
 
   .card {
-    margin-left:55px;
+    margin-left:57px;
   }
 
   .card-title {
@@ -332,6 +354,51 @@ small {
     width: 100%;
     
   }
+  
+
+  .card1{
+    min-height: 600px;
+    width:300px;
+  
+  }
+  .counter h3 {
+    font-size: 5px;
+
+  }
+
+  .count {
+    font-size: 1em;
+
+    color: #c01d1d;
+  }
+
+
+
+}
+
+.counter-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px ;
+  gap:10px;
+}
+
+.counter {
+  text-align: center;
+  font-family: Arial, sans-serif;
+ 
+}
+
+.counter h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #f7f7f7;
+}
+
+.count {
+  font-size: 3em;
+  font-weight: bold;
+  color: #c01d1d;
 }
 
 

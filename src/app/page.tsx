@@ -4,7 +4,6 @@ import TransText from "./Trans4Text";
 import { motion } from "framer-motion";
 import { translations } from './translation';
 
-
 export default function Home() {
   const [language, setLanguage] = useState<'en' | 'fr'>('en'); // Default language is English
   const [showVideo, setShowVideo] = useState(true); // State to control video visibility
@@ -14,7 +13,30 @@ export default function Home() {
     setLanguage(lang);
   };
 
+  
+
   useEffect(() => {
+    // Increment function to update the counter numbers
+    function incrementCounter(element, target) {
+      let currentNumber = 0;
+      const increment = Math.ceil(target / 100); // Adjust speed of count
+      const interval = setInterval(() => {
+          currentNumber += increment;
+          if (currentNumber >= target) {
+              currentNumber = target;
+              clearInterval(interval);
+          }
+          element.innerText = currentNumber; // Update the element's inner text
+      }, 50); // Adjust the speed of the count
+  }
+
+  // Wait for DOMContentLoaded to target the counters
+  const counters = document.querySelectorAll('.counter span.count');
+  counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target'); // Get target number from attribute
+      incrementCounter(counter, target); // Call the increment function
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -73,9 +95,6 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
       )}
-
-
-     
       
         {/* Text overlay that should appear immediately */}
         <div className="text-overlay">
@@ -92,28 +111,32 @@ export default function Home() {
  <div className='backgr'>
      {/* Our Services Section */}
      <h2 className="section-title">{translations[language].main.our_services}</h2>
-     <section className="services-section ">
-      
-
-          {/* Animated service div */}
-          <motion.div
-            className="service"
+     <section className="service-section1">
+      {/* Animated service div */}
+        <motion.div
+            className="service1"
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="card ">
+            <div className="card1">
             <div className="card-image card-image1"></div>
-            <p className="card-title">CONSULTING</p>
+            <p className="card-title">TRANSIT</p>
             <p className="card-body">
-            {translations[language].main.consultation}
+            {translations[language].main.transit}
             </p>
            
           </div>
           </motion.div>
+          </section>
+          
+     <section className="services-section ">
+      
+
+         
 
           <motion.div
-          className="service "
+          className="service"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
@@ -122,7 +145,7 @@ export default function Home() {
             <div className="card-image card-image2 "></div> {/* Correct class names */}
             <p className="card-title">TRANSPORTATION</p>
             <p className="card-body">
-              {translations[language].main.transit}
+              {translations[language].main.consignation}
             </p>
           </div>
         </motion.div>
@@ -137,9 +160,9 @@ export default function Home() {
           >
             <div className="card">
             <div className=" card-image card-image3"></div>
-            <p className="card-title">TRANSIT</p>
+            <p className="card-title">CONSIGNATION</p>
             <p className="card-body">
-            {translations[language].main.transit}
+            {translations[language].main.consignation}
             </p>
            
           </div>
@@ -155,15 +178,39 @@ export default function Home() {
           >
             <div className="card">
             <div className="card-image  card-image4"></div>
-            <p className="card-title">CONSIGNATION</p>
+            <p className="card-title">CONSULTATION</p>
             <p className="card-body">
-            {translations[language].main.consignation}
+            {translations[language].main.consultation}
             </p>
            
           </div>
 
           </motion.div>
         </section>
+        
+        <motion.div
+            className="service"
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9 }}
+          >
+        <h2 className="section-title">{translations[language].main.whychoose}</h2>
+      <section className="counter-section">
+      
+        <div className="counter">
+          <h3>{translations[language].main.yearsofexperience}</h3>
+          <span className="count" data-target="30">0</span>
+        </div>
+        <div className="counter">
+          <h3>Clients</h3>
+          <span className="count" data-target="45">0</span>
+        </div>
+        <div className="counter">
+          <h3>Projects</h3>
+          <span className="count" data-target="1980">0</span>
+        </div>
+      </section>
+      </motion.div>
       </div>
     </main>
   );
