@@ -270,7 +270,7 @@ small {
 
 
 /* Mobile (max-width: 425px) */
-@media (max-width: 428px) {
+@media (max-width: 431px) {
 
   .navbar
   {
@@ -312,7 +312,7 @@ small {
 }
 
   .card {
-    margin-left:70px;
+    margin-left:55px;
   }
 
   .card-title {
