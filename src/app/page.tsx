@@ -17,7 +17,7 @@ export default function Home() {
 
   useEffect(() => {
     // Increment function to update the counter numbers
-    function incrementCounter(element, target) {
+    function incrementCounter(element: HTMLElement, target: number) {
       let currentNumber = 0;
       const increment = Math.ceil(target / 100); // Adjust speed of count
       const interval = setInterval(() => {
@@ -26,15 +26,15 @@ export default function Home() {
               currentNumber = target;
               clearInterval(interval);
           }
-          element.innerText = currentNumber; // Update the element's inner text
+          element.innerText = currentNumber.toString(); // Update the element's inner text
       }, 50); // Adjust the speed of the count
   }
 
   // Wait for DOMContentLoaded to target the counters
   const counters = document.querySelectorAll('.counter span.count');
   counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target'); // Get target number from attribute
-      incrementCounter(counter, target); // Call the increment function
+      const target = +(counter.getAttribute('data-target') || 0); // Get target number from attribute
+      incrementCounter(counter as HTMLElement, target); // Call the increment function
     });
 
     const observer = new IntersectionObserver(
@@ -210,7 +210,7 @@ export default function Home() {
           <span className="count" data-target="1980">0</span>
         </div>
       </section>
-      </motion.div>
+       </motion.div>
       </div>
     </main>
   );

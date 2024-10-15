@@ -162,11 +162,8 @@ small {
 .services-section {
   display: grid;
   border:white;
- 
   /* General grid layout for larger screens */
-  
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
-
 }
 
 .section-title {
@@ -302,14 +299,12 @@ small {
 
   .language-icon {
     width: 15px;
-    height: 15px;
-   
+    height: 15px;   
   }
 
     /* Styling for the company name */
   .company-name {
-    font-size: 2rem; /* Adjust to your preference */
-    
+    font-size: 2rem; /* Adjust to your preference */  
   }
 
     /* Styling for the "T" */
@@ -351,29 +346,23 @@ small {
 
   .card-image {
     height: 50%;
-    width: 100%;
-    
+    width: 100%;  
   }
   
 
   .card1{
     min-height: 600px;
     width:300px;
-  
   }
+
   .counter h3 {
     font-size: 5px;
-
   }
 
   .count {
     font-size: 1em;
-
     color: #c01d1d;
   }
-
-
-
 }
 
 .counter-section {
