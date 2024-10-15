@@ -8,6 +8,8 @@ body, html {
   height: 100%;
 }
 
+
+
 /* Navbar */
 .navbar {
   width: 100%;
@@ -38,15 +40,15 @@ body, html {
 
 /* Background section */
 .background-section {
-  flex: auto;
+  
   background-size:cover;
   background-attachment:scroll;
   height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
 
 }
 
@@ -141,16 +143,7 @@ small {
 }
 
 /* Main container */
-.backgr {
-  
-  margin-top: 15%;
-  width: 100%;
-  height: 100vh; /* Full height of the viewport */
-  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
-  --gap: 5em;
-  --line: 1px;
-  --color: rgb(77, 73, 73);
-}
+
 
 /* Keyframes for background animation */
 @keyframes move-background {
@@ -162,19 +155,14 @@ small {
   }
 }
 
-
-/* Main container */
 .services-section {
-  display: flex; /* Make sure the section is flexbox */
-  flex-direction: row; /* Set to row to align items horizontally */
- 
-  justify-content: space-around; /* Space out items */
-  align-items: flex-start; /* Align items at the top */
-  gap: 0px; /* Add some spacing between the items */
-  padding-bottom:5% ;
-  text-align: center;
+  display: grid;
+  border:white;
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
+  /* General grid layout for larger screens */
   
-  
+  grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
+
 }
 
 .section-title {
@@ -188,45 +176,17 @@ small {
  
 .service {
   padding-top: 5%;
-    display: flex; /* Enable flexbox within each service */
-    flex-direction: row; /* Ensure image and text are aligned horizontally */
-    align-items: center; /* Align items vertically in the center */
-    width: 45%; /* Adjust width so that two items can fit in one row */
-   
-}
-  
-
-.service-image {
-  border-radius: 15%;
-  width: 300px;
-  height: auto;
-  margin-right: 20px;
-  box-shadow: 15px 15px 30px #b2aeae,
-  -15px -15px 30px #f6f6f6;
-}
-
-.service-text {
-  text-align: left;
-  padding: 50px;
-  text-align: center;
-}
-
-.service-text h3 {
-  font-size: 1.8em;
-  margin-bottom: 15px;
-}
-
-.service-text p {
-  font-size: 1.1em;
+  width:100%;
 }
 
 .card {
+  margin-left:50px;
+  transition: 0.4s;
   padding: 7px;
-  width: 330px;
   min-height: 370px;
+  width:270px;
   border-radius: 20px;
   background: #ffffff;
-  transition: 0.4s;
 }
 
 .card:hover {
@@ -250,6 +210,7 @@ small {
 
 /* Specific background images for each card */
 .card-image1 {
+ 
   background-image: url('/service1.jpg');
 }
 
@@ -304,3 +265,73 @@ small {
 .language-icon:hover {
   opacity: 1;
 }
+
+
+
+
+/* Mobile (max-width: 425px) */
+@media (max-width: 428px) {
+
+  .navbar
+  {
+    font-size:7px;
+    gap: 1px;
+  }
+
+  .language-icon {
+    width: 15px;
+    height: 15px;
+   
+  }
+
+    /* Styling for the company name */
+  .company-name {
+    font-size: 2rem; /* Adjust to your preference */
+    
+  }
+
+    /* Styling for the "T" */
+  .t {
+    font-size: 5rem; /* Adjust size as needed */
+  }
+
+  .words {
+    font-size: 1em; /* Adjust font size as needed */
+    font:bolder;
+  }
+
+  .section-title {
+    color:white;
+    font-size: 2em;
+    padding-top: 6%;
+  }
+
+  
+.services-section {
+  grid-template-columns: 1fr;
+}
+
+  .card {
+    margin-left:70px;
+  }
+
+  .card-title {
+    font-size: 15px; /* Slightly smaller font size */
+    font:bolder;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .card-body {
+    display: flex;
+    font-size: 14px; /* Smaller body text */
+    text-align: center;
+  }
+
+  .card-image {
+    height: 50%;
+    width: 100%;
+    
+  }
+}
+
+

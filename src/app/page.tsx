@@ -41,7 +41,7 @@ export default function Home() {
 
 
   return (
-    <main className="main-page">
+    <main className="main-page ">
       {/* Navbar */}
       <nav className="navbar">
         <h1>TRANS4 SL</h1>
@@ -92,8 +92,8 @@ export default function Home() {
  <div className='backgr'>
      {/* Our Services Section */}
      <h2 className="section-title">{translations[language].main.our_services}</h2>
-     <section className="services-section">
-          
+     <section className="services-section ">
+      
 
           {/* Animated service div */}
           <motion.div
@@ -102,7 +102,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-             <div className="card">
+            <div className="card ">
             <div className="card-image card-image1"></div>
             <p className="card-title">CONSULTING</p>
             <p className="card-body">
@@ -113,13 +113,13 @@ export default function Home() {
           </motion.div>
 
           <motion.div
-          className="service"
+          className="service "
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7 }}
           >
           <div className="card">
-            <div className="card-image card-image2"></div> {/* Correct class names */}
+            <div className="card-image card-image2 "></div> {/* Correct class names */}
             <p className="card-title">TRANSPORTATION</p>
             <p className="card-body">
               {translations[language].main.transit}
@@ -161,8 +161,8 @@ export default function Home() {
             </p>
            
           </div>
-          </motion.div>
 
+          </motion.div>
         </section>
       </div>
     </main>
