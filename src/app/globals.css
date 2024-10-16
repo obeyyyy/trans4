@@ -1,11 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 /* Global Styles */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
   height: 100%;
+}
+h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, .scroll-text {
+  font-family: 'Poppins', sans-serif;
+}
+
+.h3{
+  margin-right: 160px;
+  color:white;
+  margin-top: 5px;
+}
+
+.logo3{
+ width: 200px;
+ height: 80px;
+
 }
 
 
@@ -22,6 +38,7 @@ body, html {
   align-items: center;
   z-index: 10;
   box-sizing: border-box;
+  height: 100px;
 }
 
 .navbar h1, .navbar a {
@@ -71,6 +88,11 @@ body, html {
   font-weight: bold;
   padding-left: 10px;
   text-decoration: underline;
+  color: black;
+}
+
+.imgshadow{
+  box-shadow: 10px 10px 5px rgb(38, 36, 36);
 }
 
 /* Animated "4" styling */
@@ -171,6 +193,7 @@ small {
   text-align: center;
   font-size: 2.5em;
   padding-top: 6%;
+
 }
 
 
@@ -180,13 +203,10 @@ small {
   width:100%;
 }
 
-.service1{
-  width:200%;
-}
 
 .card {
   margin-left:50px;
-  transition: 0.4s;
+  transition: 0 2s;
   padding: 7px;
   min-height: 370px;
   width:270px;
@@ -200,12 +220,19 @@ small {
 
 .card1 {
   margin-left:50px;
-  transition: 0.4s;
+  transition: 0 2s;
   padding: 7px;
   min-height: 500px;
   width:1400px;
   border-radius: 20px;
   background: #ffffff;
+  width: 1040px;
+}
+
+.align-main{
+
+  width: 100%;
+  margin-left: 180px;
 }
 
 .card:hover {
@@ -230,7 +257,8 @@ small {
 /* Specific background images for each card */
 .card-image1 {
   background-image: url('/service3.jpg');
-  height: 300px;
+  height: 100px;
+  width: 1040px;
 }
 
 .card-image2 {
@@ -283,6 +311,14 @@ small {
 
 .language-icon:hover {
   opacity: 1;
+}
+
+
+.language-icon1 {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  opacity: 1; /* Dim the non-selected flag */
 }
 
 
@@ -363,6 +399,28 @@ small {
     font-size: 1em;
     color: #c01d1d;
   }
+  .logo3{
+    width: 100px;
+    height: 50px;
+   }
+
+   .imgshadow{
+    width:200px;
+    height: 80px;
+  }
+  .align-main{
+
+    width: 100%;
+    margin-left: 1px;
+  }
+  .card1{
+    margin-left: 37px;
+  }
+  .mainlogo{
+    width: 300px;
+  } 
+
+   
 }
 
 .counter-section {
@@ -391,3 +449,46 @@ small {
 }
 
 
+.scroll-down-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-down {
+  position: relative;
+
+  text-align: center;
+  font-size: 70px;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 50px;
+  height: 50px;
+  border-bottom: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
+  transform: translate(-50%, 0%) rotate(45deg);
+  animation: fade_move_down 2s ease-in-out infinite;
+}
+
+.scroll-text {
+  font-size: 22px;
+  color: #fdfdfd;
+  text-shadow:4px 4px 5px rgba(0, 0, 0, 0.962); /* Shadow effect */
+  font-weight: 900; /* Set to a high value for bold text *
+  color: #d50000; /* Adjust the color as needed */
+ /* Space between the arrow and the text */
+  text-align: center;
+  animation: fade_in_out 2s ease-in-out infinite;
+}
+
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0; }
+  50%  { opacity: 1; }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+
+@keyframes fade_in_out {
+  0%   { opacity: 0; }
+  50%  { opacity: 1; }
+  100% { opacity: 0; }
+}

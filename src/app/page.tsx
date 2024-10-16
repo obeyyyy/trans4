@@ -66,10 +66,15 @@ export default function Home() {
     <main className="main-page ">
       {/* Navbar */}
       <nav className="navbar">
-        <h1>TRANS4 SL</h1>
+        <h1> <img className='logo3' src='/logo5.png'></img></h1>
         <ul>
-          <li><a href="#">Email: info@gmail.com</a></li>
-          <li><a href="#">Tel: +212 558 954 12</a></li>
+          <img src="/emaillogo.png" className='language-icon1'/>
+          <li className='h3'>Trans4tanger@gmail.com</li>
+        </ul>
+
+        <ul>
+          <img src="/phonelogo.png" className='language-icon1'/>
+          <li className='h3'>+212 666-981720</li>
         </ul>
          {/* Language Icons */}
          <div className="language-switcher">
@@ -98,19 +103,23 @@ export default function Home() {
       
         {/* Text overlay that should appear immediately */}
         <div className="text-overlay">
-          <TransText/>
-          
-          </div>
-          <div className="words-container">
-          <div className="words" data-text="Transit -> Transport -> Consignation -> Consultation">
-            Transit&nbsp;{'->'}&nbsp;Transport&nbsp;{'->'}&nbsp;Consignation&nbsp;{'->'}&nbsp;Consultation
-          </div>
+          <TransText/>    
         </div>
+
+        <div className="scroll-down-container">
+        <p className="scroll-text">{translations[language].main.scroll}</p>
+        <span className="scroll-down"></span>
+       
+      </div>
+
+      
       
  {/* Background section */}
  <div className='backgr'>
+  
      {/* Our Services Section */}
      <h2 className="section-title">{translations[language].main.our_services}</h2>
+     <div className='align-main'>
      <section className="service-section1">
       {/* Animated service div */}
         <motion.div
@@ -186,7 +195,10 @@ export default function Home() {
           </div>
 
           </motion.div>
+
+
         </section>
+        </div>
         
         <motion.div
             className="service"
@@ -199,15 +211,15 @@ export default function Home() {
       
         <div className="counter">
           <h3>{translations[language].main.yearsofexperience}</h3>
-          <span className="count" data-target="30">0</span>
+          <span className="count" data-target="18">0</span>
         </div>
         <div className="counter">
           <h3>Clients</h3>
-          <span className="count" data-target="45">0</span>
+          <span className="count" data-target="40">0</span>
         </div>
         <div className="counter">
           <h3>Projects</h3>
-          <span className="count" data-target="1980">0</span>
+          <span className="count" data-target="2006">0</span>
         </div>
       </section>
        </motion.div>
