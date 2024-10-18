@@ -66,7 +66,7 @@ export default function Home() {
     <main className="main-page ">
       {/* Navbar */}
       <nav className="navbar">
-        <h1> <img className='logo3' src='/logo5.png'></img></h1>
+        <img className='logo3' src='/logo5.png'></img>
         <ul>
           <img src="/emaillogo.png" className='language-icon1'/>
           <li className='h3'>Trans4tanger@gmail.com</li>
@@ -139,16 +139,14 @@ export default function Home() {
           </motion.div>
           </section>
           
-     <section className="services-section ">
+     <section className="services-section">
       
-
-         
 
           <motion.div
           className="service"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.2 }}
           >
           <div className="card">
             <div className="card-image card-image2 "></div> {/* Correct class names */}
@@ -223,6 +221,38 @@ export default function Home() {
         </div>
       </section>
        </motion.div>
+       {/* Clients section */}
+       <section className="clients-section">
+        <h2 className="clients-title">Our Clients</h2>
+        <div className="clients-logos">
+          <div className="client-logo">
+            <img src="/clients/agl.png" alt="Client 1 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/renault.png" alt="Client 2 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/pwl.png" alt="Client 3 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/tetouanexpo.png" alt="Client 4 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/bernimod.png" alt="Client 4 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/ilpea.png" alt="Client 4 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/mm.png" alt="Client 4 Logo" />
+          </div>
+          <div className="client-logo">
+            <img src="/clients/geodis.png" alt="Client 4 Logo" />
+          </div>
+          {/* Add more client logos as needed */}
+        </div>
+      </section>
+      
       </div>
     </main>
   );

@@ -21,7 +21,6 @@ h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, 
 .logo3{
  width: 200px;
  height: 80px;
-
 }
 
 
@@ -95,37 +94,11 @@ h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, 
   box-shadow: 10px 10px 5px rgb(38, 36, 36);
 }
 
-/* Animated "4" styling */
-.animated-4 {
-  display: inline-block;
-  color: red; /* Add any specific color/animation styling */
-  margin-left: 1.5rem; /* Add space on the left */
-  margin-right: 1rem; /* Add space on the right */
-}
-
 /* Styling for "SARL" */
 small {
   font-size: 1.5rem; /* Smaller size for SARL */
 }
 
-/* Styling for the "T" */
-.t {
-  display: inline-block;
-  color: black; /* Specify the color for the T */
-  font-size: 7rem; /* Adjust size as needed */
-  text-decoration: none; /* No underline for the T */
-  transform: translateY(10px); /* Move down slightly */
-  margin-right: -0.5rem; /* Adjust spacing if needed */
-}
-
-@keyframes move-words {
-  0% {
-    transform: translateX(65%); /* Start off-screen to the right */
-  }
-  100% {
-    transform: translateX(-100%); /* Move completely off-screen to the left */
-  }
-}
 
 .words-container {
   position: relative; /* Set up relative positioning for the child elements */
@@ -186,6 +159,7 @@ small {
   border:white;
   /* General grid layout for larger screens */
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
+ 
 }
 
 .section-title {
@@ -215,6 +189,10 @@ small {
 }
 
 .services-section1{
+  display: grid;
+  border:white;
+  /* General grid layout for larger screens */
+ 
   background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
 }
 
@@ -222,11 +200,10 @@ small {
   margin-left:50px;
   transition: 0 2s;
   padding: 7px;
-  min-height: 500px;
-  width:1400px;
+  height: 500px;
   border-radius: 20px;
   background: #ffffff;
-  width: 1040px;
+  width: 1030px;
 }
 
 .align-main{
@@ -235,8 +212,10 @@ small {
   margin-left: 180px;
 }
 
-.card:hover {
-  translate: 0 -20px;
+.card:hover, .card1:hover {
+  transition: 0.5s;
+  translate: 0 -10px;
+  
 }
 
 .card-title {
@@ -257,8 +236,7 @@ small {
 /* Specific background images for each card */
 .card-image1 {
   background-image: url('/service3.jpg');
-  height: 100px;
-  width: 1040px;
+ 
 }
 
 .card-image2 {
@@ -324,71 +302,75 @@ small {
 
 
 
+                                  /* Mobile (max-width: 425px) */
 /* Mobile (max-width: 425px) */
-@media (max-width: 431px) {
+@media (max-width:470px) {
 
-  .navbar
-  {
-    font-size:7px;
+  /* Updated Services Section for Mobile */
+  .services-section{
+    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
+    
+  }
+
+.align-main{
+  margin-left: 50px !important;
+}
+  
+
+  .card1, .card-image1{
+    width: 210px !important;
+  }
+
+  .navbar {
+    font-size: 6px;
     gap: 1px;
   }
 
-  .language-icon {
+  .navbar li, h3 {
+    font-size: 5px;
+  }
+
+  .navbar ul {
+    width: 0;
+    gap: 5px;
+    margin-right: 70px;
+  }
+
+  .navbar img.logo3{
+    height: 50px;
+    width: 90px;
+  }
+
+  .language-icon, .language-icon1{
     width: 15px;
-    height: 15px;   
+    height: 15px;
+    margin: 0;
   }
 
-    /* Styling for the company name */
   .company-name {
-    font-size: 2rem; /* Adjust to your preference */  
-  }
-
-    /* Styling for the "T" */
-  .t {
-    font-size: 5rem; /* Adjust size as needed */
+    font-size: 1rem;
   }
 
   .words {
-    font-size: 1em; /* Adjust font size as needed */
-    font:bolder;
+    font-size: 1em;
+    font-weight: bolder;
   }
 
   .section-title {
-    color:white;
+    color: white;
     font-size: 2em;
     padding-top: 6%;
   }
 
-  
-  .services-section {
-    grid-template-columns: 1fr;
-  }
-
-  .card {
-    margin-left:57px;
-  }
-
   .card-title {
-    font-size: 15px; /* Slightly smaller font size */
-    font:bolder;
+    font-size: 15px;
+    font-weight: bolder;
     font-family: 'Times New Roman', Times, serif;
   }
 
   .card-body {
-    display: flex;
-    font-size: 14px; /* Smaller body text */
+    font-size: 14px;
     text-align: center;
-  }
-
-  .card-image {
-    height: 50%;
-    width: 100%;  
-  }
-  
-
-  .card1{
-    min-height: 600px;
-    width:300px;
   }
 
   .counter h3 {
@@ -399,28 +381,64 @@ small {
     font-size: 1em;
     color: #c01d1d;
   }
-  .logo3{
-    width: 100px;
-    height: 50px;
-   }
 
-   .imgshadow{
-    width:200px;
-    height: 80px;
-  }
-  .align-main{
-
+  .imgshadow {
     width: 100%;
-    margin-left: 1px;
+    height: auto;
   }
-  .card1{
-    margin-left: 37px;
+  .mainlogo {
+    width: 200px;
   }
-  .mainlogo{
-    width: 300px;
-  } 
 
-   
+  
+}
+
+
+
+                                        /* For 1024px screens */
+@media (max-width: 1025px) {
+  .navbar {
+    padding: 15px 30px; /* Reduce padding */
+    height: 80px; /* Adjust height */
+  }
+
+  .navbar h1, .navbar a, h3 {
+    font-size: 1rem; /* Reduce font size */
+  }
+
+  .company-name {
+    font-size: 3rem; /* Adjust for smaller screens */
+  }
+
+  .align-main{
+  margin-left: 70px;
+  }
+
+  .card {
+    /* Adjust margin */
+    width: 210px; /* Smaller card width */
+    margin-left:55px; 
+  }
+  .card1 {
+    width: 770px; /* Adjust larger card */
+  }
+
+  .card-image1{
+    width: 770px;
+  }
+
+  .h3 {
+    margin-right: 120px; /* Adjust margin */
+  }
+  
+  .logo3 {
+    width: 150px; /* Adjust logo size */
+    height: 60px;
+  }
+
+  .text-overlay {
+    padding-top: 15%; /* Adjust text overlay padding */
+  }
 }
 
 .counter-section {
@@ -492,3 +510,42 @@ small {
   50%  { opacity: 1; }
   100% { opacity: 0; }
 }
+
+/* CLIENTS SECTION */
+
+.clients-section {
+  padding: 20px 0;
+  text-align: center;
+ 
+}
+
+.clients-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.clients-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.client-logo img {
+  max-width: 150px; /* Limit the size of the logos */
+  max-height: 100px;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.client-logo img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  cursor: pointer;
+}
+
+
+
+
+
