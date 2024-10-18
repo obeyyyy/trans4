@@ -74,7 +74,7 @@ export default function Home() {
 
         <ul>
           <img src="/phonelogo.png" className='language-icon1'/>
-          <li className='h3'>+212 666-981720</li>
+          <li className='h4'>+212 666-981720</li>
         </ul>
          {/* Language Icons */}
          <div className="language-switcher">

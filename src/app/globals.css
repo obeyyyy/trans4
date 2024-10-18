@@ -8,7 +8,7 @@ body, html {
   scroll-behavior: smooth;
   height: 100%;
 }
-h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, .scroll-text {
+h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-body, .scroll-text {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -18,20 +18,29 @@ h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, 
   margin-top: 5px;
 }
 
+.h4{
+  color: white;
+  margin-top: 5px;
+}
+
+
+
 .logo3{
  width: 200px;
  height: 80px;
+ 
 }
 
 
 
 /* Navbar */
 .navbar {
+  white-space: nowrap; /* Prevent line breaks */
   width: 100%;
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 15px 50px;
+  padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,9 +54,9 @@ h1, h2, h3, p, .navbar, .company-name, .section-title, .card-title, .card-body, 
 }
 
 .navbar ul {
-  list-style: none;
+  
   display: flex;
-  gap: 20px;
+  gap: 5px;
 }
 
 .navbar ul li a:hover {
@@ -307,10 +316,9 @@ small {
 @media (max-width:470px) {
 
   /* Updated Services Section for Mobile */
-  .services-section{
-    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
-    
-  }
+.services-section{
+    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */    
+}
 
 .align-main{
   margin-left: 50px !important;
@@ -337,14 +345,15 @@ small {
   }
 
   .navbar img.logo3{
-    height: 50px;
-    width: 90px;
+    height: 30px;
+    width: 70px;
+    margin: 0px;
   }
 
   .language-icon, .language-icon1{
     width: 15px;
     height: 15px;
-    margin: 0;
+   
   }
 
   .company-name {
@@ -388,6 +397,11 @@ small {
   }
   .mainlogo {
     width: 200px;
+  }
+
+  .h4{
+    display: flex;
+    font-size: 7px !important;
   }
 
   
