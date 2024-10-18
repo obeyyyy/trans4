@@ -13,7 +13,7 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
 }
 
 .h3{
-  margin-right: 160px;
+  margin-right: 200px;
   color:white;
   margin-top: 5px;
 }
@@ -49,17 +49,15 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
   height: 100px;
 }
 
-.navbar h1, .navbar a {
-  color: white;
-}
+
 
 .navbar ul {
-  
   display: flex;
   gap: 5px;
+  list-style-type: none; /* Remove bullet points */
 }
 
-.navbar ul li a:hover {
+.navbar ul h3 h4 li a:hover {
   color: #f00;
 }
 
@@ -201,7 +199,6 @@ small {
   display: grid;
   border:white;
   /* General grid layout for larger screens */
- 
   background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
 }
 
@@ -216,7 +213,6 @@ small {
 }
 
 .align-main{
-
   width: 100%;
   margin-left: 180px;
 }
@@ -271,11 +267,7 @@ small {
   font-weight: 700;
 }
 
-.navbar select {
-  padding: 5px;
-  border-radius: 5px;
-  margin-left: 20px;
-}
+
 
 .language-switcher {
   display: flex;
@@ -335,7 +327,7 @@ small {
   }
 
   .navbar li, h3 {
-    font-size: 5px;
+    font-size: 7px;
   }
 
   .navbar ul {
@@ -351,8 +343,8 @@ small {
   }
 
   .language-icon, .language-icon1{
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
    
   }
 
