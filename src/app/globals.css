@@ -305,7 +305,7 @@ small {
 
                                   /* Mobile (max-width: 425px) */
 /* Mobile (max-width: 425px) */
-@media (max-width:470px) {
+@media (max-width:450px) {
 
   /* Updated Services Section for Mobile */
 .services-section{
@@ -313,6 +313,7 @@ small {
 }
 
 .align-main{
+
   margin-left: 50px !important;
 }
   
@@ -328,6 +329,7 @@ small {
 
   .navbar li, h3 {
     font-size: 7px;
+    
   }
 
   .navbar ul {
@@ -345,30 +347,25 @@ small {
   .language-icon, .language-icon1{
     width: 10px;
     height: 10px;
-   
+    margin-top: 5px;
   }
-
   .company-name {
     font-size: 1rem;
   }
-
   .words {
     font-size: 1em;
     font-weight: bolder;
   }
-
   .section-title {
     color: white;
     font-size: 2em;
     padding-top: 6%;
   }
-
   .card-title {
     font-size: 15px;
     font-weight: bolder;
     font-family: 'Times New Roman', Times, serif;
   }
-
   .card-body {
     font-size: 14px;
     text-align: center;
@@ -397,6 +394,14 @@ small {
   }
 
   
+}
+
+@media (max-width:400)
+{
+  .card1{
+    margin-right: 20px;
+  }
+
 }
 
 
@@ -538,6 +543,10 @@ small {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
+  padding: 30px;
+  margin: 15px;
+  border-radius: 40px;
+  background: #ffffff;
 }
 
 .client-logo img {
