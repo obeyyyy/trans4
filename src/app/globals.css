@@ -133,6 +133,7 @@ small {
 .backgr{
   background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
   margin-top: 50px;
+  align-items:center;
 }
 
 /* Main backgr */
@@ -162,8 +163,10 @@ small {
 }
 
 .services-section {
+  align-items: center;
   display: grid;
   border:white;
+  gap:45px;
   /* General grid layout for larger screens */
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
  
@@ -313,7 +316,6 @@ small {
 }
 
 .align-main{
-
   margin-left: 50px !important;
 }
   
@@ -371,8 +373,8 @@ small {
     text-align: center;
   }
 
-  .counter h3 {
-    font-size: 5px;
+  .counter{
+    font-size: 10px;
   }
 
   .count {
@@ -396,12 +398,27 @@ small {
   
 }
 
-@media (max-width:400)
+@media (min-width:1500px)
 {
   .card1{
-    margin-right: 20px;
-  }
+    margin: 0;
 
+    width: 2200px;
+  }
+  .services-section{
+    margin-left: 300px;
+  }
+}
+
+@media (max-width:399px)
+{
+  
+  .align-main{
+    margin-left:27px !important;
+  }
+  .counter {
+    font-size: 10px;
+  }
 }
 
 
@@ -450,16 +467,24 @@ small {
   .text-overlay {
     padding-top: 15%; /* Adjust text overlay padding */
   }
+
+  .services-section{
+    gap:1px;
+  }
 }
 
 .counter-section {
+  margin: 10px;
   display: flex;
   justify-content: space-around;
   padding: 30px ;
   gap:10px;
+  border-radius: 40px;
+  background: #ffffff;
 }
 
 .counter {
+  
   text-align: center;
   font-family: Arial, sans-serif;
  
@@ -468,7 +493,7 @@ small {
 .counter h3 {
   font-size: 1.5em;
   margin-bottom: 10px;
-  color: #f7f7f7;
+  color: #000000;
 }
 
 .count {

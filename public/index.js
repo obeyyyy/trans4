@@ -8,7 +8,7 @@ function incrementCounter(element, target) {
             currentNumber = target;
             clearInterval(interval);
         }
-        element.innerText = currentNumber;
+        element.innerText = currentNumber + "+";
     }, 30); // Adjust the speed of the count
 }
 

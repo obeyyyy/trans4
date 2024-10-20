@@ -26,7 +26,7 @@ export default function Home() {
               currentNumber = target;
               clearInterval(interval);
           }
-          element.innerText = currentNumber.toString(); // Update the element's inner text
+          element.innerText = currentNumber.toString() + "+"; // Update the element's inner text
       }, 50); // Adjust the speed of the count
   }
 
@@ -171,7 +171,6 @@ export default function Home() {
             <p className="card-body">
             {translations[language].main.consignation}
             </p>
-           
           </div>
           </motion.div>
 
@@ -210,6 +209,7 @@ export default function Home() {
         <div className="counter">
           <h3>{translations[language].main.yearsofexperience}</h3>
           <span className="count" data-target="18">0</span>
+          
         </div>
         <div className="counter">
           <h3>Clients</h3>
