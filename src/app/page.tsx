@@ -19,7 +19,7 @@ export default function Home() {
     // Increment function to update the counter numbers
     function incrementCounter(element: HTMLElement, target: number) {
       let currentNumber = 0;
-      const increment = Math.ceil(target / 100); // Adjust speed of count
+      const increment = Math.ceil(target / 500); // Adjust speed of count
       const interval = setInterval(() => {
           currentNumber += increment;
           if (currentNumber >= target) {
@@ -27,7 +27,7 @@ export default function Home() {
               clearInterval(interval);
           }
           element.innerText = currentNumber.toString() + "+"; // Update the element's inner text
-      }, 50); // Adjust the speed of the count
+      }, 100); // Adjust the speed of the count
   }
 
   // Wait for DOMContentLoaded to target the counters
@@ -251,6 +251,13 @@ export default function Home() {
           </div>
           {/* Add more client logos as needed */}
         </div>
+      </section>
+
+      <h2 className="section-title">{translations[language].main.contact_us}</h2>
+      <section className='contact_section'>
+      <div className="responsive-map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.5341327717133!2d-5.801766047570283!3d35.77567685615017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f606385458b%3A0x6b0246fae8f4f607!2zTmVqbWEgLSDYp9mE2YbYrNmF2Kk!5e0!3m2!1sen!2sma!4v1729547969840!5m2!1sen!2sma"></iframe>
+      </div>
       </section>
       
       </div>

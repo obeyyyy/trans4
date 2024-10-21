@@ -9,7 +9,7 @@ function incrementCounter(element, target) {
             clearInterval(interval);
         }
         element.innerText = currentNumber + "+";
-    }, 30); // Adjust the speed of the count
+    }, 10); // Adjust the speed of the count
 }
 
 // Example usage with multiple counters

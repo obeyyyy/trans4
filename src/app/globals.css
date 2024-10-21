@@ -585,6 +585,28 @@ small {
   cursor: pointer;
 }
 
+.responsive-map{
+  overflow: hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:100%;
+  width: 100%;
+  }
+  .responsive-map iframe{
+  width: 400px;
+  height: 400px;
+  left:25px;
+  border-radius: 40px;
+  position:absolute;
+  }
+
+  .contact_section{
+    display: grid;
+    /* General grid layout for larger screens */
+    grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
+
+  }
+
 
 
 
