@@ -3,6 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 import TransText from "./Trans4Text";
 import { motion } from "framer-motion";
 import { translations } from './translation';
+import emailjs from 'emailjs-com';
+import Contact from './contact'
 
 export default function Home() {
   const [language, setLanguage] = useState<'en' | 'fr'>('en'); // Default language is English
@@ -12,6 +14,33 @@ export default function Home() {
   const changeLanguage = (lang: 'en' | 'fr') => {
     setLanguage(lang);
   };
+
+  const ContactForm = () => {
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+  
+    const [status, setStatus] = useState('');
+  
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+    };
+  
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+  
+      emailjs.send('service_yp1d2i8', 'template_oe51lk8', formData, '4xYZgRXwTULV1UCbn')
+        .then((result) => {
+          setStatus('Email sent successfully!');
+        }, (error) => {
+          setStatus('Failed to send the email.');
+        });
+    };
+  
 
   
 
@@ -60,6 +89,8 @@ export default function Home() {
       }
     };
   }, []);
+
+}
 
 
   return (
@@ -258,6 +289,9 @@ export default function Home() {
       <div className="responsive-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.5341327717133!2d-5.801766047570283!3d35.77567685615017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f606385458b%3A0x6b0246fae8f4f607!2zTmVqbWEgLSDYp9mE2YbYrNmF2Kk!5e0!3m2!1sen!2sma!4v1729547969840!5m2!1sen!2sma"></iframe>
       </div>
+      <div className="contact-form-container">
+            <Contact /> {/* Add the ContactForm here */}
+          </div>
       </section>
       
       </div>
