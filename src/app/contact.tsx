@@ -20,16 +20,13 @@ const ContactForm = () => {
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
-   
-  
     // Email to you (the actual recipient)
     emailjs
-      .send('service_yp1d2i8', 'template_oe51lk8',formData, '4xYZgRXwTULV1UCbn')
+      .send('service_5jpwfkx', 'template_k30wisr',formData, 'vaLI9kxgqJTTTpNHq')
       .then(
         () => {
           // Email sent to you successfully
-          setStatus('Message sent successfully1111!');
+          setStatus('Message sent successfully !');
         }
       )
       .catch((error) => {
@@ -39,7 +36,6 @@ const ContactForm = () => {
   };
   
     
-
   return (
     <form onSubmit={sendEmail} className="contact-form">
       <label htmlFor="name">Name</label>

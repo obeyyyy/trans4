@@ -12,6 +12,26 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
   font-family: 'Poppins', sans-serif;
 }
 
+.maintext-div{
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
+}
+
+.main_title{
+  color: rgb(167, 0, 0);
+  margin-left: 400px;
+
+}
+
+.main-text1{
+  color: #f8f7f7;
+  margin-left: 100px; 
+}
+.main-text{
+  color: white;
+}
+
 .h3{
   margin-right: 200px;
   color:white;
@@ -308,7 +328,7 @@ small {
 
                                   /* Mobile (max-width: 425px) */
 /* Mobile (max-width: 425px) */
-@media (max-width:450px) {
+@media (max-width:500px) {
 
   /* Updated Services Section for Mobile */
 .services-section{
@@ -398,6 +418,11 @@ small {
   
 }
 
+@media ( max-width:900px){
+
+  
+}
+
 @media (min-width:2400px)
 {
   .card1{
@@ -424,7 +449,7 @@ small {
 
 
                                         /* For 1024px screens */
-@media (max-width: 1025px) {
+@media (max-width: 1300px) {
   .navbar {
     padding: 15px 30px; /* Reduce padding */
     height: 80px; /* Adjust height */
@@ -567,15 +592,14 @@ small {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-  padding: 30px;
-  margin: 15px;
+  gap: 20px;
+  padding: 25px;
   border-radius: 40px;
   background: #ffffff;
 }
 
 .client-logo img {
-  max-width: 150px; /* Limit the size of the logos */
+  max-width: 210px; /* Limit the size of the logos */
   max-height: 100px;
   transition: transform 0.3s ease; /* Smooth hover effect */
 }
@@ -587,14 +611,15 @@ small {
 
 .responsive-map{
   overflow: hidden;
-  padding-bottom:56.25%;
+  
   position:relative;
   height:100%;
   width: 100%;
   }
+
   .responsive-map iframe{
-  width: 400px;
-  height: 440px;
+  width: 700px;
+  height:410px;
   left:25px;
   border-radius: 40px;
   position:absolute;
@@ -602,19 +627,19 @@ small {
 
   .contact_section{
     display: grid;
+    margin: 5px;
     /* General grid layout for larger screens */
     grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
-
   }
 
   /* Contact Form Styles */
 .contact-form {
-  max-width: 600px; /* Set a max width for the form */
   
+  max-width: 600px; /* Set a max width for the form */
   padding: 30px; /* Add padding inside the form */
-  background-color: #f9f9f9; /* Light background color */
+  background-color: #f1f1f1; /* Light background color */
   border-radius: 45px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+ 
   
 }
 
@@ -629,16 +654,12 @@ small {
   
   margin-bottom: 15px; /* Space between inputs */
   border: 1px solid #ccc; /* Light border */
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 10px; /* Rounded corners */
   font-size: 16px; /* Larger font for readability */
   transition: border-color 0.3s; /* Smooth transition for focus */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #007bff; /* Highlight border on focus */
-  outline: none; /* Remove default outline */
-}
+
 
 .contact-form button {
   width: 100%; /* Full width button */

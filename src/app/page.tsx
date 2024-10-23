@@ -15,35 +15,6 @@ export default function Home() {
     setLanguage(lang);
   };
 
-  const ContactForm = () => {
-    const [formData, setFormData] = useState({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    });
-  
-    const [status, setStatus] = useState('');
-  
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-      const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
-    };
-  
-    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-  
-      emailjs.send('service_yp1d2i8', 'template_oe51lk8', formData, '4xYZgRXwTULV1UCbn')
-        .then((result) => {
-          setStatus('Email sent successfully!');
-        }, (error) => {
-          setStatus('Failed to send the email.');
-        });
-    };
-  
-
-  
-
   useEffect(() => {
     // Increment function to update the counter numbers
     function incrementCounter(element: HTMLElement, target: number) {
@@ -90,7 +61,6 @@ export default function Home() {
     };
   }, []);
 
-}
 
 
   return (
@@ -147,7 +117,17 @@ export default function Home() {
       
  {/* Background section */}
  <div className='backgr'>
-  
+ <h2 className="section-title">WHO IS TRANS4 SARL</h2>
+ <p className='main-text1'>Fondée en 2008, Transits & Douanes S.A. s'est rapidement affirmée comme un leader dans le domaine du transit et des services douaniers. Avec plus de 15 ans d'expérience, notre société a développé une expertise unique pour accompagner nos clients dans leurs opérations internationales, en veillant à ce que chaque envoi respecte les réglementations douanières.</p>
+<div className='maintext-div'>
+<h1 className='main_title'>NOTRE MISSION</h1><p className='main-text'>Notre mission est de simplifier le processus de transit pour nos clients tout en garantissant la conformité douanière. Nous nous engageons à offrir des services de transit efficaces et sécurisés, adaptés aux besoins spécifiques de chaque client.<br></br></p>
+<h1 className='main_title'>NOTRE EVOLUTION</h1><p className='main-text'>Dès ses débuts, Transits & Douanes S.A. a élargi son champ d’action pour inclure non seulement le transit routier, maritime et aérien, mais aussi les services d’assistance douanière. Grâce à une équipe de professionnels qualifiés, nous garantissons un dédouanement rapide et efficace, minimisant ainsi les délais d'attente pour nos clients.<br></br></p>
+
+<h1 className='main_title'>NOS VALEURS</h1><p className='main-text'>’intégrité, l'innovation et la transparence sont les piliers de notre entreprise. Nous croyons en l'importance d'une communication claire avec nos clients, en les tenant informés à chaque étape du processus de transit et de dédouanement.</p>
+
+<h1 className='main_title'>PERSPECTIVES D'AVENIR</h1><p className='main-text'>En cette année marquant notre 15ème anniversaire, nous sommes fiers des relations solides que nous avons construites avec nos clients et partenaires. Nous continuons d'investir dans la formation de notre équipe et dans des technologies avancées pour améliorer nos services, tout en restant à l'écoute des évolutions du marché.</p>
+</div>
+
      {/* Our Services Section */}
      <h2 className="section-title">{translations[language].main.our_services}</h2>
      <div className='align-main'>
@@ -257,7 +237,7 @@ export default function Home() {
         <h2 className="clients-title">Our Clients</h2>
         <div className="clients-logos">
           <div className="client-logo">
-            <img src="/clients/agl.png" alt="Client 1 Logo" />
+            <img src="/clients/ilpea.png" alt="Client 1 Logo" />
           </div>
           <div className="client-logo">
             <img src="/clients/renault.png" alt="Client 2 Logo" />
@@ -266,13 +246,13 @@ export default function Home() {
             <img src="/clients/pwl.png" alt="Client 3 Logo" />
           </div>
           <div className="client-logo">
-            <img src="/clients/tetouanexpo.png" alt="Client 4 Logo" />
+            <img src="/clients/somap.png" alt="Client 4 Logo" />
           </div>
           <div className="client-logo">
             <img src="/clients/bernimod.png" alt="Client 4 Logo" />
           </div>
           <div className="client-logo">
-            <img src="/clients/ilpea.png" alt="Client 4 Logo" />
+            <img src="/clients/agl.png" alt="Client 4 Logo" />
           </div>
           <div className="client-logo">
             <img src="/clients/mm.png" alt="Client 4 Logo" />
@@ -287,7 +267,7 @@ export default function Home() {
       <h2 className="section-title">{translations[language].main.contact_us}</h2>
       <section className='contact_section'>
       <div className="responsive-map">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1355.5341327717133!2d-5.801766047570283!3d35.77567685615017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0c7f606385458b%3A0x6b0246fae8f4f607!2zTmVqbWEgLSDYp9mE2YbYrNmF2Kk!5e0!3m2!1sen!2sma!4v1729547969840!5m2!1sen!2sma"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.074509958113!2d-5.802160124745158!3d35.77354602489826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b8144034db989%3A0xcc914a0b0f73bd8!2sTRANS4%20TRANSIT-%20Transitaire%20%C3%A0%20Tanger%20et%20Casablanca!5e0!3m2!1sen!2sma!4v1729705609605!5m2!1sen!2sma"></iframe>
       </div>
       <div className="contact-form-container">
             <Contact /> {/* Add the ContactForm here */}
