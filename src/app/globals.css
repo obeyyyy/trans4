@@ -13,23 +13,28 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
 }
 
 .maintext-div{
+  text-align: center;
+  align-content: center;
   align-items: center;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
 }
 
 .main_title{
   color: rgb(167, 0, 0);
-  margin-left: 400px;
+  margin-top: 70px;
 
 }
 
-.main-text1{
-  color: #f8f7f7;
-  margin-left: 100px; 
+
+.main-page{
+  align-content: center;
+  align-items: center;
 }
 .main-text{
   color: white;
+  text-align: center;
+  width: auto;
+  margin: 10px;
+  
 }
 
 .h3{
@@ -82,8 +87,7 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
 }
 
 /* Background section */
-.background-section {
-  
+.background-section { 
   background-size:cover;
   background-attachment:scroll;
   height: 100vh;
@@ -92,7 +96,6 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
   display: flex;
   justify-content: left;
   align-items: left;
-
 }
 
 /* Text overlay */
@@ -182,14 +185,31 @@ small {
   }
 }
 
-.services-section {
+.services-section{
   align-items: center;
-  display: grid;
+  align-items: center;
+  display: flex;
+  gap: 50px;
   border:white;
-  gap:45px;
   /* General grid layout for larger screens */
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
  
+}
+
+@media (max-width: 937px) {
+
+  .services-section{
+    display: grid;
+    gap: 0;
+   
+    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
+  }
+  .card{
+    margin: 15px !important;
+    width: 90% !important;
+    padding: 0;
+  }
+  
 }
 
 .section-title {
@@ -197,53 +217,46 @@ small {
   text-align: center;
   font-size: 2.5em;
   padding-top: 6%;
-
 }
 
 
  
-.service {
-  padding-top: 5%;
-  width:100%;
-}
+
 
 
 .card {
-  margin-left:50px;
   transition: 0 2s;
   padding: 7px;
-  min-height: 370px;
-  width:270px;
+  margin: 50px;
+
+  width:100%;
   border-radius: 20px;
   background: #ffffff;
 }
 
 .services-section1{
-  display: grid;
+  align-self: center;
+  position:fixed;
+  margin: 50px;
+
   border:white;
   /* General grid layout for larger screens */
   background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
 }
 
 .card1 {
-  margin-left:50px;
   transition: 0 2s;
-  padding: 7px;
+  padding: 15px;
+  margin: 15px;
   height: 500px;
   border-radius: 20px;
   background: #ffffff;
-  width: 1030px;
-}
-
-.align-main{
-  width: 100%;
-  margin-left: 180px;
+  width: auto;
 }
 
 .card:hover, .card1:hover {
   transition: 0.5s;
   translate: 0 -10px;
-  
 }
 
 .card-title {
@@ -340,9 +353,7 @@ small {
 }
   
 
-  .card1, .card-image1{
-    width: 210px !important;
-  }
+  
 
   .navbar {
     font-size: 6px;
@@ -418,22 +429,8 @@ small {
   
 }
 
-@media ( max-width:900px){
 
-  
-}
 
-@media (min-width:2400px)
-{
-  .card1{
-    margin: 0;
-
-    width: 2200px;
-  }
-  .services-section{
-    margin-left: 300px;
-  }
-}
 
 @media (max-width:399px)
 {
@@ -443,58 +440,6 @@ small {
   }
   .counter {
     font-size: 10px;
-  }
-}
-
-
-
-                                        /* For 1024px screens */
-@media (max-width: 1300px) {
-  .navbar {
-    padding: 15px 30px; /* Reduce padding */
-    height: 80px; /* Adjust height */
-  }
-
-  .navbar h1, .navbar a, h3 {
-    font-size: 1rem; /* Reduce font size */
-  }
-
-  .company-name {
-    font-size: 3rem; /* Adjust for smaller screens */
-  }
-
-  .align-main{
-  margin-left: 70px;
-  }
-
-  .card {
-    /* Adjust margin */
-    width: 210px; /* Smaller card width */
-    margin-left:55px; 
-  }
-  .card1 {
-    width: 770px; /* Adjust larger card */
-  }
-
-  .card-image1{
-    width: 770px;
-  }
-
-  .h3 {
-    margin-right: 120px; /* Adjust margin */
-  }
-  
-  .logo3 {
-    width: 150px; /* Adjust logo size */
-    height: 60px;
-  }
-
-  .text-overlay {
-    padding-top: 15%; /* Adjust text overlay padding */
-  }
-
-  .services-section{
-    gap:1px;
   }
 }
 
@@ -577,6 +522,7 @@ small {
 .clients-section {
   padding: 20px 0;
   text-align: center;
+  margin: 10px;
  
 }
 
@@ -610,42 +556,53 @@ small {
 }
 
 .responsive-map{
-  overflow: hidden;
+  
   
   position:relative;
-  height:100%;
+  height:auto;
   width: 100%;
   }
 
   .responsive-map iframe{
-  width: 700px;
-  height:410px;
+  width: auto;
+  height:400px;
   left:25px;
   border-radius: 40px;
-  position:absolute;
+ 
   }
 
   .contact_section{
     display: grid;
-    margin: 5px;
+    margin: 15px;
+    gap: 10px;
     /* General grid layout for larger screens */
     grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
   }
 
   /* Contact Form Styles */
 .contact-form {
-  
-  max-width: 600px; /* Set a max width for the form */
+  max-width: auto; /* Set a max width for the form */
   padding: 30px; /* Add padding inside the form */
   background-color: #f1f1f1; /* Light background color */
   border-radius: 45px; /* Rounded corners */
- 
-  
 }
 
 .contact-form label {
- 
   font-weight: bold; /* Bold labels */
+}
+
+
+@media (max-width: 707px){
+  .contact_section{
+    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
+  }
+
+  
+  .responsive-map iframe{
+    width: 100%;
+   
+    }
+
 }
 
 .contact-form input,
@@ -682,6 +639,8 @@ small {
   color: #b30606; /* Green color for success messages */
   font-weight: bold; /* Bold for emphasis */
 }
+
+
 
 
 
