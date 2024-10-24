@@ -38,6 +38,7 @@ const ContactForm = () => {
     
   return (
     <form onSubmit={sendEmail} className="contact-form">
+      <h1>MESSAGE US</h1>
       <label htmlFor="name">Name</label>
       <input type="text" name="from_name" id="name" value={formData.from_name} onChange={handleInputChange} required />
 

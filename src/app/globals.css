@@ -35,8 +35,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   text-align: center;
   width: auto;
   margin: 30px;
-  font-size:25px;
-  
+  font-size:20px;
 }
 
 .h3{
@@ -48,10 +47,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 .logo3{
  width: 200px;
  height: 80px;
- 
 }
-
-
 
 /* Navbar */
 .navbar {
@@ -60,13 +56,13 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   position: fixed;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 15px 40px;
-  display:inline-flex;
-  justify-content:flex-start;
+  display:flex;
+  justify-content:space-between;
   align-items: flex-start;
   height: auto;
+  z-index: 10;
+  box-sizing: border-box
 }
-
-
 
 .navbar ul {
   display: flex;
@@ -157,7 +153,6 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   border:white;
   /* General grid layout for larger screens */
   grid-template-columns: repeat(4, 1fr); /* Adjust for desktop, showing 4 items */
- 
 }
 
 @media (max-width: 937px) {
@@ -174,33 +169,27 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   }
 }
 
-@media (max-width: 1012px)
+@media (max-width: 1096px)
 {
   .h3{
     font-size: 10px !important;
   }
   .language-switcher{
     gap: 5px !important;
-    margin-left: 0px !important;
-   
+    margin-left: 0px !important; 
   }
   .language-icon{
     width: 20px !important;
   }
-
   .logo3{
     width: 100px;
     height: 50px;
     margin: 10px;
   }
-
   .ul{
     margin: 0 !important;
   }
-
-
 }
-
 
 .section-title {
   color:white;
@@ -209,16 +198,10 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   padding-top: 6%;
 }
 
-
- 
-
-
-
 .card {
   transition: 0 2s;
   padding: 7px;
   margin: 50px;
-
   width:100%;
   border-radius: 20px;
   background: #ffffff;
@@ -226,9 +209,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 
 .services-section1{
   align-self: center;
-  position:fixed;
   margin: 50px;
-
   border:white;
   /* General grid layout for larger screens */
   background-color: rgba(0, 0, 0, 0.8); /* Slightly more opaque */
@@ -288,18 +269,14 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   font-size: 15px;
 }
 
-
 .by-name {
   font-weight: 700;
 }
 
-
-
 .language-switcher {
   display: flex;
-  align-items:flex-end;
-  margin: auto;
-  margin-left: auto;
+  margin: 20px;
+  margin-right: 115px;
   gap: 40px;
 }
 
@@ -319,7 +296,6 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   opacity: 1;
 }
 
-
 .language-icon1 {
   width: 30px;
   height: 30px;
@@ -329,53 +305,31 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 
 
 
-
-                                  /* Mobile (max-width: 425px) */
 /* Mobile (max-width: 425px) */
-@media (max-width:678px) {
+@media (max-width:755px) {
 
   /* Updated Services Section for Mobile */
-.services-section{
-    grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */    
-}
-
-
-  
-
-  .navbar {
-    font-size: 6px;
-    gap: 1px;
+  .services-section{
+      grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */    
   }
 
-  .navbar li, h3 {
-    font-size: 7px;
-    
+  .navbar {
+    gap: 0px;
+    margin: 0;
+    padding: 0;
   }
 
   .navbar ul {
-    width: 0;
-    gap: 5px;
-    margin-right: 70px;
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0px;
   }
-
-  .navbar img.logo3{
-    height: 30px;
-    width: 70px;
-    margin: 0px;
-  }
-
   .language-icon, .language-icon1{
     width: 10px;
     height: 10px;
-    margin-top: 5px;
-  }
-  .company-name {
-    font-size: 1rem;
-  }
-  .words {
-    font-size: 1em;
-    font-weight: bolder;
-  }
+    margin-top: 8px;
+    gap: 0; 
+  } 
   .section-title {
     color: white;
     font-size: 2em;
@@ -405,30 +359,21 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
     height: auto;
   }
   .mainlogo {
-    width: 200px;
-  }
-
-  .h4{
-    display: flex;
-    font-size: 7px !important;
-  }
-
-  
-}
-
-
-
-
-@media (max-width:399px)
-{
-  
-  .align-main{
-    margin-left:27px !important;
-  }
-  .counter {
-    font-size: 10px;
+    width: 300px;
   }
 }
+
+@media (max-width: 480px){
+  .navbar h3{
+    font-size: 3px;
+  }
+  .navbar img.logo3{
+    width: 40px;
+    height:25px;
+    margin-top: 15px;
+  }
+}
+
 
 .counter-section {
   margin: 10px;
@@ -441,10 +386,8 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 }
 
 .counter {
-  
   text-align: center;
   font-family: Arial, sans-serif;
- 
 }
 
 .counter h3 {
@@ -468,7 +411,6 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 
 .scroll-down {
   position: relative;
-
   text-align: center;
   font-size: 70px;
   text-decoration: none;
@@ -491,6 +433,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   text-align: center;
   animation: fade_in_out 2s ease-in-out infinite;
 }
+
 
 @keyframes fade_move_down {
   0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0; }
@@ -542,17 +485,14 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   cursor: pointer;
 }
 
-.responsive-map{
-  
-  
+.responsive-map{  
   position:relative;
-  height:auto;
   width: 100%;
   }
 
   .responsive-map iframe{
   width: 100%;
-  height:400px;
+  height:100%;
   left:25px;
   border-radius: 40px;
  
@@ -562,6 +502,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
     display: grid;
     margin: 15px;
     gap: 10px;
+    height: 100%;
     /* General grid layout for larger screens */
     grid-template-columns: repeat(2, 1fr); /* Adjust for desktop, showing 4 items */
   }
@@ -569,7 +510,9 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   /* Contact Form Styles */
 .contact-form {
   max-width: auto; /* Set a max width for the form */
-  padding: 30px; /* Add padding inside the form */
+  max-height: auto;
+  margin: 3px;
+  padding: 25px; /* Add padding inside the form */
   background-color: #f1f1f1; /* Light background color */
   border-radius: 45px; /* Rounded corners */
 }
@@ -586,7 +529,16 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   .responsive-map iframe{
     width: 100%;
     }
+}
 
+@media (max-width: 390px){
+  .navbar li.h3{
+    margin: 10px;
+    font-size: 7px !important;
+  }
+  .mainlogo img{
+    width:200px !important;
+  }
 }
 
 .contact-form input,
@@ -605,7 +557,7 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
 .contact-form button {
   width: 100%; /* Full width button */
   padding: 10px; /* Padding inside button */
-  background-color: #000000; /* Primary color for button */
+  background-color: #242020; /* Primary color for button */
   color: white; /* White text on button */
   border: none; /* Remove border */
   border-radius: 45px; /* Rounded corners */
