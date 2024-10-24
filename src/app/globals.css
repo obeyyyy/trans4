@@ -8,7 +8,7 @@ body, html {
   scroll-behavior: smooth;
   height: 100%;
 }
-h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-body, .scroll-text {
+h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-body, .scroll-text {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -19,9 +19,10 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
 }
 
 .main_title{
+  text-align: center;
   color: rgb(167, 0, 0);
   margin-top: 70px;
-
+  font-size:45px ;
 }
 
 
@@ -33,22 +34,16 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
   color: white;
   text-align: center;
   width: auto;
-  margin: 10px;
+  margin: 30px;
+  font-size:25px;
   
 }
 
 .h3{
-  margin-right: 200px;
+  margin: 10px;
   color:white;
   margin-top: 5px;
 }
-
-.h4{
-  color: white;
-  margin-top: 5px;
-}
-
-
 
 .logo3{
  width: 200px;
@@ -63,23 +58,21 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
   white-space: nowrap; /* Prevent line breaks */
   width: 100%;
   position: fixed;
-  top: 0;
   background-color: rgba(0, 0, 0, 0.8);
   padding: 15px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 10;
-  box-sizing: border-box;
-  height: 100px;
+  display:inline-flex;
+  justify-content:flex-start;
+  align-items: flex-start;
+  height: auto;
 }
 
 
 
 .navbar ul {
   display: flex;
-  gap: 5px;
+  gap: 0px;
   list-style-type: none; /* Remove bullet points */
+  margin: 20px;
 }
 
 .navbar ul h3 h4 li a:hover {
@@ -122,35 +115,6 @@ h1, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-title, .card-bo
 
 .imgshadow{
   box-shadow: 10px 10px 5px rgb(38, 36, 36);
-}
-
-/* Styling for "SARL" */
-small {
-  font-size: 1.5rem; /* Smaller size for SARL */
-}
-
-
-.words-container {
-  position: relative; /* Set up relative positioning for the child elements */
-  overflow: hidden; /* Hide any overflow to make the animation clean */
-  width: 100%; /* Full width for the container */
-  height: 3em; /* Adjust height to ensure text isn't cut off */
-}
-
-.words {
-  font:bold;
-  position: absolute; /* Allow for the animated movement */
-  white-space: nowrap; /* Prevent wrapping of text */
-  display: inline-block; /* Keep the words in one line */
-  animation: move-words 25s linear infinite; /* Continuous loop */
-  font-size: 2em; /* Adjust font size as needed */
-  color: rgb(0, 0, 0); /* Adjust text color */
-}
-
-/* Extra duplication of words for continuous effect */
-.words::after {
-  content: attr(data-text); /* Duplicate text automatically */
-  padding-left: 30em; /* Space between original and duplicated text */
 }
 
 .backgr{
@@ -197,20 +161,46 @@ small {
 }
 
 @media (max-width: 937px) {
-
   .services-section{
     display: grid;
     gap: 0;
-   
     grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
   }
   .card{
-    margin: 15px !important;
-    width: 90% !important;
-    padding: 0;
+    width: auto !important;
   }
-  
+  .card1{
+    width: auto;
+  }
 }
+
+@media (max-width: 1012px)
+{
+  .h3{
+    font-size: 10px !important;
+  }
+  .language-switcher{
+    gap: 5px !important;
+    margin-left: 0px !important;
+   
+  }
+  .language-icon{
+    width: 20px !important;
+  }
+
+  .logo3{
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+  }
+
+  .ul{
+    margin: 0 !important;
+  }
+
+
+}
+
 
 .section-title {
   color:white;
@@ -307,13 +297,14 @@ small {
 
 .language-switcher {
   display: flex;
-  align-items: center;
-  gap: 10px; /* Space between flags */
-  margin-left: 20px;
+  align-items:flex-end;
+  margin: auto;
+  margin-left: auto;
+  gap: 40px;
 }
 
 .language-icon {
-  width: 30px;
+  width: auto;
   height: 30px;
   cursor: pointer;
   opacity: 0.6; /* Dim the non-selected flag */
@@ -341,17 +332,13 @@ small {
 
                                   /* Mobile (max-width: 425px) */
 /* Mobile (max-width: 425px) */
-@media (max-width:500px) {
+@media (max-width:678px) {
 
   /* Updated Services Section for Mobile */
 .services-section{
     grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */    
 }
 
-.align-main{
-  margin-left: 50px !important;
-}
-  
 
   
 
@@ -564,7 +551,7 @@ small {
   }
 
   .responsive-map iframe{
-  width: auto;
+  width: 100%;
   height:400px;
   left:25px;
   border-radius: 40px;
@@ -596,11 +583,8 @@ small {
   .contact_section{
     grid-template-columns: repeat(1, 1fr); /* Adjust for desktop, showing 4 items */
   }
-
-  
   .responsive-map iframe{
     width: 100%;
-   
     }
 
 }

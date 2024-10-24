@@ -75,7 +75,7 @@ export default function Home() {
 
         <ul>
           <img src="/phonelogo.png" className='language-icon1'/>
-          <li className='h4'>+212 666-981720</li>
+          <li className='h3'>+212 666-981720</li>
         </ul>
          {/* Language Icons */}
          <div className="language-switcher">
@@ -124,7 +124,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
           >
- <h2 className="section-title">WHO IS TRANS4 SARL</h2>
+ <h2 className="main_title">WHO IS TRANS4 SARL</h2>
  <p className='main-text'>Fondée en 2008, Transits & Douanes S.A. s'est rapidement affirmée comme un leader dans le domaine du transit et des services douaniers. Avec plus de 15 ans d'expérience, notre société a développé une expertise unique pour accompagner nos clients dans leurs opérations internationales, en veillant à ce que chaque envoi respecte les réglementations douanières.</p>
  </motion.div>
 <h1 className='main_title'>NOTRE MISSION</h1><p className='main-text'>Notre mission est de simplifier le processus de transit pour nos clients tout en garantissant la conformité douanière. Nous nous engageons à offrir des services de transit efficaces et sécurisés, adaptés aux besoins spécifiques de chaque client.<br></br></p>
@@ -137,9 +137,10 @@ export default function Home() {
 </div>
 
      {/* Our Services Section */}
-     <h2 className="section-title">{translations[language].main.our_services}</h2>
+     
      <section className="service-section1">
       {/* Animated service div */}
+      <h2 className="main_title">{translations[language].main.our_services}</h2>
         <motion.div
            
             initial={{ opacity: 0, x: -100 }}
@@ -219,7 +220,7 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
           >
-        <h2 className="section-title">{translations[language].main.whychoose}</h2>
+        <h2 className="main_title">{translations[language].main.whychoose}</h2>
       <section className="counter-section">
       
         <div className="counter">
@@ -239,7 +240,7 @@ export default function Home() {
        </motion.div>
        {/* Clients section */}
        <section className="clients-section">
-        <h2 className="clients-title">Our Clients</h2>
+        <h2 className="main_title">{translations[language].main.clients}</h2>
         <div className="clients-logos">
           <div className="client-logo">
             <img src="/clients/ilpea.png" alt="Client 1 Logo" />
@@ -269,7 +270,7 @@ export default function Home() {
         </div>
       </section>
 
-      <h2 className="section-title">{translations[language].main.contact_us}</h2>
+      <h2 className="main_title">{translations[language].main.contact_us}</h2>
       <section className='contact_section'>
       <div className="responsive-map">
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3237.074509958113!2d-5.802160124745158!3d35.77354602489826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd0b8144034db989%3A0xcc914a0b0f73bd8!2sTRANS4%20TRANSIT-%20Transitaire%20%C3%A0%20Tanger%20et%20Casablanca!5e0!3m2!1sen!2sma!4v1729705609605!5m2!1sen!2sma"></iframe>
