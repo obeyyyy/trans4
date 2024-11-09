@@ -167,6 +167,14 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   .card1{
     width: auto;
   }
+
+  .footer img{
+    width: 150px;
+  }
+
+  .footer h3{
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1096px)
@@ -534,6 +542,10 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   .mainlogo img{
     width:200px !important;
   }
+
+  .footer h3{
+    font-size: 10px;
+  }
 }
 
 .contact-form input,
@@ -570,6 +582,28 @@ h1, main_title, h2, h3, h4, p, .navbar, .company-name, .section-title, .card-tit
   color: #b30606; /* Green color for success messages */
   font-weight: bold; /* Bold for emphasis */
 }
+
+
+
+.footer {
+  display: flex;
+  justify-content: space-between; /* Space between logo and text */
+  align-items: center; /* Align items vertically centered */
+  background-color: #000000;
+  padding: 20px;
+}
+
+
+
+.footer-text {
+  display: flex;
+  flex-direction: column; /* Stack text vertically */
+  align-items: flex-start;
+  color: rgb(207, 207, 207); /* Make text visible on dark background */
+}
+
+
+
 
 
 

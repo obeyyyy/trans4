@@ -4,7 +4,8 @@ import TransText from "./Trans4Text";
 import { motion } from "framer-motion";
 import { translations } from './translation';
 import emailjs from 'emailjs-com';
-import Contact from './contact'
+import Contact from './contact';
+import Footer from './footer';
 
 export default function Home() {
   const [language, setLanguage] = useState<'en' | 'fr'>('en'); // Default language is English
@@ -124,8 +125,8 @@ export default function Home() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9 }}
           >
- <h2 className="main_title">WHO IS TRANS4 SARL</h2>
- <p className='main-text'>Fondée en 2008, Transits & Douanes S.A. s'est rapidement affirmée comme un leader dans le domaine du transit et des services douaniers. Avec plus de 15 ans d'expérience, notre société a développé une expertise unique pour accompagner nos clients dans leurs opérations internationales, en veillant à ce que chaque envoi respecte les réglementations douanières.</p>
+ <h2 className="main_title">TRANS4 SARL</h2>
+ <p className='main-text'>{translations[language].main.whoistrans4}</p>
  </motion.div>
  <motion.div
           
@@ -133,7 +134,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-<h1 className='main_title'>NOTRE MISSION</h1><p className='main-text'>Notre mission est de simplifier le processus de transit pour nos clients tout en garantissant la conformité douanière. Nous nous engageons à offrir des services de transit efficaces et sécurisés, adaptés aux besoins spécifiques de chaque client.<br></br></p>
+<h1 className='main_title'>{translations[language].main.missiontitle}</h1><p className='main-text'>{translations[language].main.ourmission}<br></br></p>
 </motion.div>
 <motion.div
           
@@ -141,7 +142,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-<h1 className='main_title'>NOTRE EVOLUTION</h1><p className='main-text'>Dès ses débuts, Tran 4 sarl. a élargi son champ d’action pour inclure non seulement le transit routier, maritime et aérien, mais aussi les services d’assistance douanière. Grâce à une équipe de professionnels qualifiés, nous garantissons un dédouanement rapide et efficace, minimisant ainsi les délais d'attente pour nos clients.<br></br></p>
+<h1 className='main_title'>{translations[language].main.Evotitle}</h1><p className='main-text'>{translations[language].main.ourevo}<br></br></p>
 </motion.div>
 <motion.div
           
@@ -149,7 +150,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-<h1 className='main_title'>NOS VALEURS</h1><p className='main-text'>L’intégrité, l'innovation et la transparence sont les piliers de notre entreprise. Nous croyons en l'importance d'une communication claire avec nos clients, en les tenant informés à chaque étape du processus de transit et de dédouanement.</p>
+<h1 className='main_title'>{translations[language].main.Valuestitle}</h1><p className='main-text'>{translations[language].main.ourvalues}</p>
 </motion.div>
 <motion.div
           
@@ -157,7 +158,7 @@ export default function Home() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-<h1 className='main_title'>PERSPECTIVES D'AVENIR</h1><p className='main-text'> Nous sommes fiers des relations solides que nous avons construites avec nos clients et partenaires. Nous continuons d'investir dans la formation de notre équipe et dans des technologies avancées pour améliorer nos services, tout en restant à l'écoute des évolutions du marché.</p>
+<h1 className='main_title'>{translations[language].main.Pertitle}</h1><p className='main-text'>{translations[language].main.persepctives}</p>
 </motion.div>
 </div>
 
@@ -195,7 +196,7 @@ export default function Home() {
             <div className="card-image card-image2 "></div> {/* Correct class names */}
             <p className="card-title">TRANSPORTATION</p>
             <p className="card-body">
-              {translations[language].main.consignation}
+              {translations[language].main.Transportation}
             </p>
           
         </motion.div>
@@ -212,7 +213,7 @@ export default function Home() {
             <div className=" card-image card-image3"></div>
             <p className="card-title">CONSIGNATION</p>
             <p className="card-body">
-            {translations[language].main.consignation}
+            {translations[language].main.Consignation}
             </p>
           
           </motion.div>
@@ -306,6 +307,8 @@ export default function Home() {
       </section>
       
       </div>
+
+      <Footer/>
     </main>
   );
 }
