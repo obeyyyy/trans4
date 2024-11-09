@@ -3,7 +3,7 @@ export const translations = {
     en: {  
       main: {
           our_services: 'OUR SERVICES',
-          missiontitle: "Our MISSION",
+          missiontitle: "OUR MISSION",
           Evotitle: "OUR EVOLUTION",
           Valuestitle: "NOTRE VALUES",
           Pertitle: "FUTURE PERSPECTIVE",
